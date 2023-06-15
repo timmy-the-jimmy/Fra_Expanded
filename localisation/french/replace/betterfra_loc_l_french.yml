@@ -1,5 +1,7 @@
 ﻿l_french:
 saar_offensive:0 "Offensive de la Sarre"
+FRA_henry_tanguy:0 "Henri Rol-Tanguy"
+FRA_bertrand_fagalde:0 "Bertrand Fagalde"
 saar_offensive_desc:0 "Nous devons nous préparer à attaquer l'Allemagne pour soulager notre allié polonais. Compte tenu de la lenteur de notre mobilisation, nous commencerons par attaquer la région de la Sarre, dans un premier temps avec des moyens limités !"
 FRA_charles_nogues:0 "Charles Noguès"
 FRA_paul_vauthier:0 "Paul Vauthier"
@@ -297,7 +299,7 @@ FRA_modernize_the_air_army_desc:0 "Les avions sont vitaux pour la guerre moderne
 FRA_desperate_measures:0 "Mesures désespérées"
 FRA_desperate_measures_desc:0 "Le front est percé, les tensions en France se ravivent et le défaitisme se propage, il est temps de raviver le patriotisme dans le pays !"
 FRA_trucks_replace_horses_desc:0 "La cavalerie sera toujours utile dans une armée, là où un camion peut tomber en panne, un cheval ne peut pas !"
-FRA_trucks_replace_horses:0 "Louez la cavalerie"
+FRA_trucks_replace_horses:0 "Acclamer la cavalerie"
 FRA_spirit_of_napoleon_desc:0 "La dernière fois que la France a conquis toute l'Europe, c'était sous le commandement de Napoléon Bonaparte, son succès devrait être étudié afin d'améliorer notre armée."
 FRA_spirit_of_napoleon:0 "L'esprit de Napoléon"
 FRA_grande_armee:0 "La Grande Armée!"

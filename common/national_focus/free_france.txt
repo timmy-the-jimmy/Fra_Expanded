@@ -1070,6 +1070,11 @@
 				ideology = communism
 				popularity = 0.1
 			}
+			effect_tooltip = {
+				create_corps_commander = {
+					name = "Henri Rol-Tanguy"
+				}
+			}
 			swap_ideas = {
 				remove_idea = FRA_connections_to_trade_unions
 				add_idea = FRA_communist_cooperation_2

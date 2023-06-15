@@ -105,6 +105,64 @@
 			}
 		}
 	}
+
+	focus = {
+		id = FRA_hanoi_road
+		icon = GFX_focus_generic_china1
+		x = 9
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {
+			focus = FRA_form_the_popular_front
+			focus = FRA_revive_the_national_bloc
+		}
+		relative_position_id = FRA_form_the_popular_front
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		OR = {
+			has_government = democratic
+			CHI = { has_government = neutrality }
+		}
+		not = {
+			has_war_with = CHI
+		}
+		CHI = {
+			has_capitulated = no
+			has_war_with = JAP
+			}
+		}
+
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = {
+				add_war_support = 0.1
+			}
+			CHI = {
+				add_war_support = 0.1
+				add_timed_idea = { idea = FRA_help_china days = 730 }
+				add_equipment_to_stockpile = {
+        			type = infantry_equipment_0
+				amount = 10000
+				}
+			}
+		}
+	}
 	
 	focus = {
 		id = FRA_devalue_the_franc
@@ -918,6 +976,90 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = FRA_polish_fighters
+		icon = GFX_focus_POL_prepare_for_the_inevitable
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = { focus = FRA_dyle_plan focus = FRA_france_on_the_offense focus = FRA_coordinated_army focus = FRA_heavy_armor_focus }
+		relative_position_id = FRA_dyle_plan
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		available = {
+			has_war_with = GER
+			POL = { is_ally_with = FRA }
+			POL = { has_capitulated = yes }
+		}
+		completion_reward = {
+		division_template = {
+					name = "Divisions Polonaises"
+					priority = 8
+					division_names_group = "Divisions Polonaises"
+					regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+							}
+					support = {
+						artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+						engineer = { x = 0 y = 1 }
+				}
+					}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 16 }
+					create_unit = {
+						division = "name = \"1ère Division de Grenadiers\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
+						owner = FRA
+					}
+					create_unit = {
+						division = "name = \"2ème Division de Chasseurs à Pieds\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
+						owner = FRA
+					}
+					create_unit = {
+						division = "name = \"3ème Division d'Infanterie\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
+						owner = FRA
+					}
+					create_unit = {
+						division = "name = \"4ème Division d'Infanterie\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
+						owner = FRA
+					}
+				}
+		}
+	}
+
+	
+	focus = {
+		id = Fra_chasseurs_alpins
+		icon = GFX_focus_GRE_a_land_of_mountains
+		prerequisite = { focus = FRA_dyle_plan focus = FRA_france_on_the_offense focus = FRA_coordinated_army focus = FRA_heavy_armor_focus }
+		x = -3
+		y = 1
+		relative_position_id = FRA_france_on_the_offense
+		cost = 5
+		
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = {  }
+
+		completion_reward = {
+			custom_effect_tooltip = GRE_mountain_training_effect
+			hidden_effect = { set_technology = { mountain_warfare = 1 } }
+			add_timed_idea = {
+				idea = FRA_preparation_in_the_alps
+				days = 180
+			}
+		}
+	}
+
 
 	focus = {
 		id = FRA_they_shall_not_pass2
@@ -1390,29 +1532,6 @@
 		}
 	}
 	focus = {
-		id = Fra_chasseurs_alpins
-		icon = GFX_focus_GRE_a_land_of_mountains
-		prerequisite = { focus = FRA_dyle_plan focus = FRA_france_on_the_offense focus = FRA_coordinated_army focus = FRA_heavy_armor_focus }
-		x = -3
-		y = 1
-		relative_position_id = FRA_france_on_the_offense
-		cost = 5
-		
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		search_filters = {  }
-
-		completion_reward = {
-			custom_effect_tooltip = GRE_mountain_training_effect
-			hidden_effect = { set_technology = { mountain_warfare = 1 } }
-			add_timed_idea = {
-				idea = FRA_preparation_in_the_alps
-				days = 180
-			}
-		}
-	}
-	focus = {
 		id = FRA_defense_passive
 		icon = GFX_goal_continuous_def_against_influence
 		prerequisite = { focus = FRA_german_threat }
@@ -1473,65 +1592,6 @@
 
 			add_idea = FRA_french_army2
 
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_polish_fighters
-		icon = GFX_focus_POL_prepare_for_the_inevitable
-		x = 1
-		y = 1
-		cost = 5
-		
-		prerequisite = { focus = FRA_dyle_plan focus = FRA_france_on_the_offense focus = FRA_coordinated_army focus = FRA_heavy_armor_focus }
-		relative_position_id = FRA_dyle_plan
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		
-		available = {
-			has_war_with = GER
-			POL = { is_ally_with = FRA }
-			POL = { has_capitulated = yes }
-		}
-		completion_reward = {
-			division_template = {
-						name = "Divisions Polonaises"
-						priority = 8
-						division_names_group = "Divisions Polonaises"
-						regiments = {
-									infantry = { x = 0 y = 0 }
-									infantry = { x = 0 y = 1 }
-									infantry = { x = 0 y = 2 }
-									infantry = { x = 1 y = 0 }
-									infantry = { x = 1 y = 1 }
-									infantry = { x = 1 y = 2 }
-								}
-						support = {
-							artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
-							engineer = { x = 0 y = 1 }
-					}
-			}
-
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				prioritize = { 16 }
-				create_unit = {
-					division = "name = \"1ère Division de Grenadiers\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
-					owner = FRA
-				}
-				create_unit = {
-					division = "name = \"2ème Division de Chasseurs à Pieds\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
-					owner = FRA
-				}
-				create_unit = {
-					division = "name = \"3ème Division d'Infanterie\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
-					owner = FRA
-				}
-				create_unit = {
-					division = "name = \"4ème Division d'Infanterie\" division_template = \"Divisions Polonaises\" start_experience_factor = 0.7" 
-					owner = FRA
-				}
 			}
 		}
 	}
@@ -2773,6 +2833,11 @@
 				ideology = democratic
 				long_name = FPM_fp_long
 				name = FPM_fp
+			}
+			effect_tooltip = {
+				create_corps_commander = {
+					name = "Henri Rol-Tanguy"
+				}
 			}
 			custom_effect_tooltip = FPM_remove_commie_strikes
 			hidden_effect = {
@@ -5597,63 +5662,6 @@
 		}
 	}
 	focus = {
-		id = FRA_hanoi_road
-		icon = GFX_focus_generic_china1
-		x = 9
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_form_the_popular_front
-			focus = FRA_revive_the_national_bloc
-		}
-		relative_position_id = FRA_form_the_popular_front
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		OR = {
-			has_government = democratic
-			CHI = { has_government = neutrality }
-		}
-		not = {
-			has_war_with = CHI
-		}
-		CHI = {
-			has_capitulated = no
-			has_war_with = JAP
-			}
-		}
-
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			FRA = {
-				add_war_support = 0.1
-			}
-			CHI = {
-				add_war_support = 0.1
-				add_timed_idea = { idea = FRA_help_china days = 730 }
-				add_equipment_to_stockpile = {
-        			type = infantry_equipment_0
-				amount = 10000
-				}
-			}
-		}
-	}
-	focus = {
 		id = FRA_franco_soviet_treaty
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = -1
@@ -6154,7 +6162,96 @@
 			TUR = { country_event = france.17 }
 		}
 	}
+	focus = {
+		id = FRA_expedition_to_salonika
+		icon = GFX_focus_generic_befriend_greece
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = FRA_go_with_britain
+		}
+		relative_position_id = FRA_go_with_britain
+		cost = 5
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = GRE
+			NOT = { has_war_with = GRE }
+			is_subject = no
+			is_in_faction = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			GRE = {
+				custom_effect_tooltip = invite_to_faction_tt
+				hidden_effect = {
+					country_event = {
+						id = generic.5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_romanian_oil
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = FRA_expedition_to_salonika
+		}
+		prerequisite = {
+			focus = FRA_scandinavian_intervention
+		}
+		relative_position_id = FRA_expedition_to_salonika
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = ROM
+			NOT = { has_war_with = ROM }
+			OR = {
+				ROM = {
+					has_government = democratic
+				}
+				ROM = {
+					has_government = neutrality
+				}
+			}
+			is_subject = no
+			is_in_faction = yes
+		}
+		
+		bypass = {
+			is_in_faction_with = ROM
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ROM = {
+				country_event = {
+					id = fpmdiploevents.13
+				}
+			}
+		}
+	}
 	focus = {
 		id = FRA_invest_in_our_weaker_allies
 		icon = GFX_focus_invest_weaker_allies
@@ -6580,96 +6677,6 @@
 			set_temp_variable = { FRA_democratic_support = party_popularity@democratic }
 			multiply_temp_variable = { FRA_democratic_support = 0.25 }
 			add_war_support = FRA_democratic_support
-		}
-	}
-	focus = {
-		id = FRA_expedition_to_salonika
-		icon = GFX_focus_generic_befriend_greece
-		x = -1
-		y = 2
-		prerequisite = {
-			focus = FRA_go_with_britain
-		}
-		relative_position_id = FRA_go_with_britain
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			country_exists = GRE
-			NOT = { has_war_with = GRE }
-			is_subject = no
-			is_in_faction = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			GRE = {
-				custom_effect_tooltip = invite_to_faction_tt
-				hidden_effect = {
-					country_event = {
-						id = generic.5
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = FRA_romanian_oil
-		icon = GFX_focus_generic_stockpile_fuel
-		x = 0
-		y = 2
-		prerequisite = {
-			focus = FRA_expedition_to_salonika
-		}
-		prerequisite = {
-			focus = FRA_scandinavian_intervention
-		}
-		relative_position_id = FRA_expedition_to_salonika
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			country_exists = ROM
-			NOT = { has_war_with = ROM }
-			OR = {
-				ROM = {
-					has_government = democratic
-				}
-				ROM = {
-					has_government = neutrality
-				}
-			}
-			is_subject = no
-			is_in_faction = yes
-		}
-		
-		bypass = {
-			is_in_faction_with = ROM
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			ROM = {
-				country_event = {
-					id = fpmdiploevents.13
-				}
-			}
 		}
 	}
 	focus = {

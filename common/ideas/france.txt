@@ -1239,7 +1239,7 @@ ideas = {
 				custom_modifier_tooltip = FPM_political_violence_tt
 				political_power_cost = 0.8
 				stability_factor = -0.10
-				surrender_limit = -0.25
+				surrender_limit = -0.20
 			}
 		}
 		FPM_disjointed_government = {

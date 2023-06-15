@@ -26,9 +26,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		USA = { 
 			country_event = {
-    			id = france.341
+    				id = france.341
 				days = 1
-				random_hours = 12
+				random = 2
 			}
 		}
 	}

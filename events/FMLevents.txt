@@ -187,6 +187,10 @@ country_event = {
     			character = FRA_louis
 		}
 		set_nationality = {
+    			target_country = FRA
+    			character = FRA_henry_tanguy
+		}
+		set_nationality = {
     			target_country = VIC
     			character = FRA_maxime_weygand
 		}
@@ -467,6 +471,7 @@ country_event = {
 		retire_character = FRA_henry_count_of_paris
 		retire_character = FRA_alphonse_i
 		retire_character = FRA_jacques_ii
+		retire_character = FRA_bertrand_fagalde
 		retire_character = FRA_petiet
 	}
 }

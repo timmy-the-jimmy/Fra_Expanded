@@ -231,7 +231,7 @@ country_event = {
 			}
 		}
 	}
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = 1 }
 	immediate = {
 		country_event = france.10
 		set_capital = {
