@@ -1,7 +1,5 @@
 ﻿l_english:
 FRA_charles_nogues:0 "Charles Noguès"
-FRA_henry_tanguy:0 "Henri Rol-Tanguy"
-FRA_bertrand_fagalde:0 "Bertrand Fagalde"
 saar_offensive:0 "Saar Offensive"
 saar_offensive_desc:0 "We must prepare to attack Germany to relieve our Polish ally. In view of our slow mobilization, we will begin by attacking the Saar region, initially with limited resources!"
 FRA_paul_vauthier:0 "Paul Vauthier"
@@ -351,7 +349,7 @@ france.998.a:0 "Pétain need to be listened, the battle is lost..."
 
 FRA_invite_communist_ministers:0 "Embrace the Strike Wave"
 FRA_invite_communist_ministers_desc:0 "The election of the Popular Front has revealed the deep seated revolutionary sentiments of the French people. Let us not compromise on our ideals now but instead lead France forwards into a brighter future!"
-FRA_disjointed_government_desc:0 "The state of French politics is far from stable. While reforms are needed and welcome, the nation is divided and getting drawn into a conflict would put it at great risk. Moreover, they are several trust issues between policticians and generals,many politicians still tries to maintain the country to be in war and often push up generals loyal to their ideals rather than those with leadership skills."
+FRA_disjointed_government_desc:0 "The state of French politics is far from stable. While reforms are needed and welcome, the nation is divided and getting drawn into a conflict would put it at great risk."
 FRA_factory_strikes:0 "General Strike"
 FRA_factory_strikes_desc:0 "The people of France toil under the Bourgeoise. The people of France cry out for the liberation of the working class, and yet we provide them nothing. While these strikes may die out some time or another, until then, our economy is as good as dead."
 FRA_revoke_the_matignon_agreements:0 "Revisit the Matignon Agreements"

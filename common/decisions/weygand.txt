@@ -144,9 +144,9 @@ FRA_weygand_category = {
 					traits={ old_guard inflexible_strategist career_officer skilled_staffer cavalry_officer war_hero }
 					skill = 5
 					attack_skill = 4
-					defense_skill = 4
+					defense_skill = 5
 					planning_skill = 4
-					logistics_skill = 3
+					logistics_skill = 4
 				} 
 			}
 		}

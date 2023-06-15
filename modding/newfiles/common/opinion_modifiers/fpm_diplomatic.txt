@@ -1,8 +1,0 @@
-opinion_modifiers = {
-	concessions_to_soviets = {
-		value = -20
-	}
-	catholic_diplomacy = {
-		value = 20
-	}
-}

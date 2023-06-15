@@ -96,16 +96,10 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_europe_generic_4
 	ideology = liberalism
-	traits = {
-		#
-	}
 }
 create_country_leader = {
 	name = "Mohammed V"
 	desc = ""
 	picture = GFX_portrait_MOR_mohamed5
 	ideology = despotism
-	traits = {
-		#
-	}
 }

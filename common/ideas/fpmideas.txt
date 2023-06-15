@@ -44,7 +44,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.2
 				stability_factor = -0.05
 			}
 		}
@@ -90,7 +89,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.4
+				political_power_gain = 0.2
 				stability_factor = 0.025
 			}
 		}
@@ -112,7 +111,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.6
+				political_power_gain = 0.3
 				stability_factor = 0.05
 			}
 		}
@@ -180,7 +179,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.4
+				political_power_gain = 0.3
 				stability_factor = 0.025
 			}
 		}
@@ -202,7 +201,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.6
+				political_power_gain = 0.4
 				stability_factor = 0.05
 			}
 		}
@@ -226,9 +225,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.075
+				stability_factor = 0.05
 				fascism_acceptance = 20
-				neutrality_acceptance = 20
 			}
 		}
 		FPM_the_national_bloc_2 = { #national bloc but "fascist" 
@@ -251,7 +249,7 @@ ideas = {
 			modifier = {
 				fascism_acceptance = 20
 				neutrality_acceptance = 20
-				political_power_gain = 0.4
+				political_power_gain = 0.2
 			}
 		}
 		FPM_union_concessions = {
