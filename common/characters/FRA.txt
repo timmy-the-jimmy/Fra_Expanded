@@ -660,7 +660,7 @@ characters={
 			traits={ old_guard inflexible_strategist career_officer skilled_staffer cavalry_officer war_hero }
 			skill=5
 			attack_skill=4
-			defense_skill=5
+			defense_skill=4
 			planning_skill=4
 			logistics_skill=3
 			legacy_id=0
@@ -1283,11 +1283,59 @@ characters={
 		corps_commander={
 			traits={ infantry_officer career_officer organizer war_hero desert_fox }
 			skill = 2
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 4
+			logistics_skill = 2
+			legacy_id=0
+		}
+	}
+
+	FRA_bertrand_fagalde={
+		name=FRA_bertrand_fagalde
+		portraits={
+			army={
+				small=GFX_portrait_FRA_henry_freydenberg_small
+			}
+			army={
+				large="gfx/leaders/FRA/fagalde.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected inflexible_strategist }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=0
+		}
+	}
+
+	FRA_henry_tanguy={
+		name=FRA_henry_tanguy
+		portraits={
+			army={
+				small=GFX_portrait_FRA_henry_freydenberg_small
+			}
+			army={
+				large="gfx/leaders/FRA/General_Henri_Rol_Tanguy.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
 			logistics_skill = 1
 			legacy_id=0
+			visible = {
+				or = {
+					has_completed_focus = FRA_cooperation_with_the_communists
+					has_completed_focus = FRA_force_the_issue
+				}
+			}
 		}
 	}
 
@@ -1319,9 +1367,9 @@ characters={
 		
 		corps_commander={
 			traits={ armor_officer cavalry_officer inflexible_strategist desert_fox }
-			skill = 4
+			skill = 3
 			attack_skill = 3
-			defense_skill = 3
+			defense_skill = 4
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id=0
@@ -1361,7 +1409,7 @@ characters={
 		}
 		corps_commander={
 			traits={ inflexible_strategist infantry_officer old_guard career_officer artillery_officer }
-			skill = 3
+			skill = 4
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 3
@@ -1451,7 +1499,7 @@ characters={
 				small=GFX_portrait_FRA_rene_olry_small
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits={ infantry_officer trait_mountaineer trickster winter_specialist artillery_officer }
 			skill=3
 			attack_skill=2
@@ -1940,7 +1988,7 @@ characters={
 		name=FRA_argenlieu
 		portraits={
 			army={
-				small="GFX_idea_FRA_generic_navy_2"
+				small="FRA_generic_navy_2"
 			}
 		}
 		advisor={
