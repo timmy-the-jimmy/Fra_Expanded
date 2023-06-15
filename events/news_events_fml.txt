@@ -1,0 +1,16 @@
+add_namespace = news
+
+news_event = {
+	id = news.fml111
+	title = news.fml111.t
+	desc = news.fml111.d
+	picture = GFX_report_event_FRA_phoney_war2
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = news.fml111.a
+	}
+}

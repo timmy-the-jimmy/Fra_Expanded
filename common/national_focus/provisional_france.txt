@@ -1,0 +1,61 @@
+﻿focus_tree = {
+	id = provisional_france_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1
+			tag = FRA
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = FRA_liberation
+		icon = GFX_focus_FRA_france_leads
+		x = 18
+		y = 0
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_core_state = {
+				NOT = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+		}
+		
+		bypass = {
+			all_core_state = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_core_state = {
+				add_resistance_target = {
+					amount = 50
+					occupied = FRA
+					occupier = GER
+					days = 120
+					tooltip = FRA_liberation
+				}
+			}	
+		}
+	}
+}

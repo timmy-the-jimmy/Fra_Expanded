@@ -1,0 +1,73 @@
+﻿division_template = {
+	name = "Régiment de Tirailleurs Marocains"		# Represents the Nepali royal guards division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+division_template = {
+	name = "Légion Étrangère"		# stationed in algeria most of the time, but it will be cool for tunisia i think
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "4ème régiment de tirailleurs marocains"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1194
+		division_template = "Régiment de Tirailleurs Marocains"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "4e régiment étranger"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1194
+		division_template = "Légion Étrangère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+}
+
+### No notable air forces ###
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MOR"
+		}
+		requested_factories = 1
+		progress = 0.89
+		efficiency = 100
+	}
+}

@@ -1,0 +1,72 @@
+add_namespace = france
+
+country_event = {
+	id = france.340
+	title = franceusa.340.t
+	desc = franceusa.340.d
+	picture = GFX_report_event_FRA_b1
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		is_subject = no
+		is_in_faction = yes
+		has_government = democratic
+		country_exists = USA
+		USA = { is_in_faction = no }
+		has_government = democratic
+		ENG = { has_war_with = GER }
+		surrender_progress > 0.35
+		FRA = { is_in_faction_with = ENG }
+	}
+	
+	option = {
+		name = franceusa.340.a
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = {
+    				id = france.341
+				days = 1
+				random = 2
+			}
+		}
+	}
+
+	option = {
+		name = france.340.b
+	}	
+}
+
+
+country_event = {
+	id = france.341
+	title = france.341.t
+	desc = france.341.d
+	picture = GFX_report_event_generic_usa_treaty
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.341.a
+		ai_chance = { factor = 0 }
+		add_timed_idea = { idea = USA_oudtated_mil  days = 300 }
+		ENG = { add_to_faction = USA }
+		if = {
+			limit = { 
+				ENG = { has_war_with = GER }
+			}
+			add_to_war = { 
+				targeted_alliance = ENG
+				enemy = GER 
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+
+	option = {
+		name = france.341.b
+	}	
+}

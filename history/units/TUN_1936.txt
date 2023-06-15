@@ -1,0 +1,85 @@
+﻿division_template = {
+	name = "Régiment de Tirailleurs Tunisiens"		# Represents the Nepali royal guards division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Compagnie Méharistes Sahariennes"		# stationed in algeria most of the time, but it will be cool for tunisia i think
+
+	regiments = {
+		camelry = { x = 0 y = 0 }
+		camelry = { x = 0 y = 1 }
+		camelry = { x = 1 y = 0 }
+		camelry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "4ème Régiment de Tirailleurs Tunisiens"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11969
+		division_template = "Régiment de Tirailleurs Tunisiens"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "1ère Compagnie Méharistes Sahariennes"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11969
+		division_template = "Compagnie Méharistes Sahariennes"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "8ème Régiment de Tirailleurs Tunisiens"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11969
+		division_template = "Régiment de Tirailleurs Tunisiens"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "20ème Régiment de Tirailleurs Tunisiens"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11969
+		division_template = "Régiment de Tirailleurs Tunisiens"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+}
+
+### No notable air forces ###
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "TUN"
+		}
+		requested_factories = 1
+		progress = 0.89
+		efficiency = 100
+	}
+}

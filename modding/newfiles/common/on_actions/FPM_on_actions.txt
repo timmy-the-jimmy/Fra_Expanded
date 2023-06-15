@@ -1,0 +1,39 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				remove_ideas = FPM_inefficient_economy_fake
+			}
+		}
+
+		effect = {
+			VIN = {
+				give_resource_rights = {
+					receiver = FRA
+					state = 671
+				}
+				give_resource_rights = {
+					receiver = FRA
+					state = 286
+				}
+				give_resource_rights = {
+					receiver = FRA
+					state = 741
+				}
+				give_resource_rights = {
+					receiver = FRA
+					state = 670
+				}
+			}
+			
+		}
+	}
+
+	on_new_term_election = {
+		random_events = {
+			100 = francepm.10
+			100 = francepm.19
+		}
+	}
+	
+}
