@@ -1,0 +1,166 @@
+FRA_historical_plan = {
+	name = "France historical plan"
+	desc = "Historical behavior for France"
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_HISTORICAL
+			}
+			has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
+		}
+	}
+	abort = {
+		OR = {
+			GER = { has_completed_focus = GER_oppose_hitler }
+			AND = {
+				ENG = { has_completed_focus = ENG_a_change_in_course }
+				NOT = { GER = { has_completed_focus = GER_oppose_hitler } }
+			}
+			is_subject = yes
+		}
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = DEFAULT
+		}
+	}
+
+	ai_national_focuses = {
+		
+		#FREE FRANCE FOCUSES
+		FRA_appeal_to_the_french_nation
+		FRA_appeal_to_overseas_territories
+		FRA_continue_the_fight
+		FRA_intervention_in_west_africa
+		FRA_form_the_national_committee
+		FRA_the_free_french_navy
+		FRA_refus_absurde
+		FRA_the_maquis
+		FRA_reach_out_to_trade_unions
+		FRA_connections_to_industrialists
+		FRA_cooperation_with_the_communists
+		FRA_the_civil_and_military_organization
+		FRA_national_council_of_the_resistance
+		FRA_french_forces_of_the_interior
+		FRA_national_uprising
+		FRA_colonial_recruitment
+		FRA_army_of_liberation
+		FRA_form_the_provisional_government_of_the_republic
+		
+		#1936 FRANCE FOCUSES
+		FRA_autoroutes #March 11, 1936
+		FRA_invest_in_the_metropole #May 20, 1936
+		#Popular Front Starts Here
+		FRA_reform_the_labour_laws  #June 24, 1936 
+		FRA_ban_the_leagues #July 29, 1936
+		FRA_devalue_the_franc #October 7, 1936
+		FRA_nationalize_key_industry #December 16, 1936
+
+		#1937
+		FRA_reorganize_the_aviation_industry #February 24, 1937
+		FRA_form_the_state_arsenals #May 5, 
+		#Chautemps Starts Around Here
+		FRA_metropolitan_france  #June 9, 1937
+		FRA_algerie_france # July 14, 1937
+		FRA_industrial_expansion #September 22, 1937
+		FRA_extra_research_slot #December 1, 1937
+		
+		#1938
+		FRA_begin_rearmament #February 9, 1938
+		#Blum is Back
+		FRA_plan_v #April 20, 1938
+		#Daladier
+		FRA_review_foreign_policy #May 25, 1938
+		FRA_buy_time #August 3, 1938
+		FRA_request_emergency_powers #October 12, 1938
+		FRA_go_with_britain #December 21, 1938
+	 
+		#1939
+		FRA_defensive_focus #January 25, 1939
+		FRA_dirigisme_alt #March 1, 1939
+		FRA_german_threat #May 10, 1939
+		FRA_defense_passive #June 14, 1939
+		FRA_revive_the_franco_polish_alliance #July 19, 1939
+		FRA_groupes_francs #August 23, 1939
+		FRA_anglo_french_war_council #September 27, 1939
+		FRA_call_the_ALVF #November 1, 1939
+		FRA_infantry_tanks #December 6, 1939
+
+		#1940
+		FRA_dyle_plan
+		FRA_artillery_focus #January 10, 1940
+		FRA_division_cuirassee #May 29, 1940
+		Fra_chasseurs_alpins
+		FRA_polish_fighters
+		FRA_mobilize_colonies #absolutely needed or france will run out of manpower (the focus passive defense tell the ai to produce more divisions so its likely ai will have problem with manpower in a war)
+		FRA_they_shall_not_pass2
+		FRA_implore_patriotism #February 14, 1940
+		FRA_strengthen_government_support #August 7, 1940
+		FRA_firepower_kills
+		FRA_expedition_to_salonika #September 11, 1940
+		FRA_romanian_oil # October 16, 1940
+		 
+		#1941
+		FRA_wargames #march 5, 1941
+		FRA_infantry_focus #May 14, 1941
+		FRA_foreign_legion #June 18, 1941
+		FRA_boost_tank_production #June 18, 1941
+		FRA_heavy_armor_focus #November 5, 1941
+		FRA_defensive_strategems #December 10, 1941
+
+		#1942
+		FRA_national_unity_government #February 18, 1942
+		FRA_army_reform #June 3, 1942
+
+		#Further stuff
+		FRA_naval_rearmament
+		FRA_fighter_focus
+		FRA_anti_air_focus
+		FRA_fighter_designs
+		FRA_bomber_designs
+		FRA_air_focus
+		FRA_modernize_the_air_army
+		FRA_bomber_focus
+		FRA_heavy_bomber_focus
+		FRA_radar
+		FRA_develop_colonial_dockyards
+		FRA_cas_focus
+		FRA_air_dominance
+		FRA_flying_artillery
+		FRA_colonial_air_bases
+		
+	}
+	focus_factors = {
+		FRA_right_wing_rhetoric = 0
+		FRA_leftist_rhetoric = 0
+		FRA_the_blum_viollette_proposal = 0
+	}
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

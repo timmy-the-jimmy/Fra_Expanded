@@ -1,0 +1,602 @@
+add_namespace = france
+
+# #Capital captured by non french faction
+# country_event = {
+# 	id = france.99
+# 	title = france.99.t
+# 	desc = france.99.d
+# 	picture = GFX_report_event_french_tanks
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		original_tag = FRA
+# 		16 = { controller = { NOT = { original_tag = FRA } } }
+# 		has_capitulated = yes
+# 	}
+	
+# 	mean_time_to_happen = {
+# 		days = 60
+# 	}
+
+# 	option = {
+# 		name = france.99.a
+# 		add_offsite_building = {
+# 					type = arms_factory
+# 				level = 2
+# 			}
+# 		}
+# }
+
+# country_event = {
+# 	id = france.336
+# 	title = france.336.t
+# 	desc = france.336.d
+# 	picture = GFX_report_event_FRA_petain
+	
+# 	trigger = {
+# 		has_country_leader = {
+# 			name = "Paul Reynaud"
+# 			ruling_only = yes
+# 		}
+# 		FRA = { surrender_progress > 0.75}
+# 		original_tag = FRA 
+# 		has_government = democratic
+# 	}
+	
+# 		mean_time_to_happen =  {
+# 		days = 1
+# 	}
+# 	fire_only_once = yes
+	
+# 	option = {
+# 		name = france.336.a
+# 		add_political_power = 150
+# 		remove_country_leader_role = {
+# 			character = FRA_paul_reynaud
+# 			ideology = liberalism
+# 		}
+# 		add_country_leader_role = {
+# 			character = FRA_philippe_petain
+# 			country_leader = {
+# 				expire = "1965.1.1"
+# 				ideology = liberalism
+# 				traits = {
+# 					FPM_the_lion_of_verdun_1
+# 				}
+# 			}
+# 			promote_leader = yes
+# 		}		
+# 		FRA_stout_defender_add_effect = yes
+# 		add_stability = 0.01
+# 		add_war_support = -0.25
+# 		}
+# }
+
+country_event = {
+	id = france.337
+	title = france.337.t
+	desc = france.337.d
+	picture = GFX_report_event_bunker_01
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 1938.06.06
+		date < 1939.06.06
+	 	has_idea = FRA_protected_by_the_maginot_line
+    }
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = france.337.a
+		add_stability = 0.01
+	}
+}
+
+#blitz
+country_event = {
+	id = france.333
+	title = france.333.t
+	desc = france.333.d
+	picture = GFX_report_event_FRA_r35
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		surrender_progress > 0.02
+	 	has_idea = FRA_victors_of_wwi
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = france.333.a
+		add_timed_idea = { idea = FRA_blitzkrieg  days = 25 }
+	}
+}
+
+#vichy or free france ?
+country_event = {
+	id = france.555
+	title = france.555.t
+	desc = france.555.d
+	picture = GFX_report_event_degaulle_inspect_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		has_idea = FRA_defeatism
+    }
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = france.555.a
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_rene_olry
+		} 
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_henri_giraud
+		} 
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_charles_nogues
+		} 
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_charles_conde 
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_philippe_leclerc 
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_koening
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_aubert_frere
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_jean_garchery	
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_argenlieu
+		}	
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_rene_prioux
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_louis
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_henry_tanguy
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_maxime_weygand
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_jean_de_lattre_de_tassigny
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_charles_de_gaulle
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_philippe_leclerc
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_antoinemariebenoit_besson
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_hering
+		}
+		set_nationality = {
+    			target_country = FRA
+    			character = FRA_legentilhomme
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_charles_huntziger
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_gastonhenri_billotte
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_andre_corap
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_robert_altmayer
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_pretelat
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_victor_bourret
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_touchon
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_jean_flavigny
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_bethouart
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_alfred_heurtaux
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_pierre_laval
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_august_laure
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_georges_blanchard
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_henry_freydenberg
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_henri_blehaut
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_charles_platon
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_georges_robert
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_jeanpierre_esteva
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_jean_de_laborde
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_philippe_fequant
+		}
+		set_nationality = {
+    			target_country = VIC
+    			character = FRA_edourad_requin
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jeanmarie_charles_abrial
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jeanpierre_esteva
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jean_marie_abrial
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_francois_darlan
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jean_decoux
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jean_marie_bergeret
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_marcel_gensoul
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jean_francois_jannekeyn
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_pierre_etienne_flandin
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_philippe_henriot
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_pierre_pucheu
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_eugene_deloncle
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_marcel_bucard
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_jacques_doriot
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_charles_maurras
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_maurice_thorez
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_edouard_daladier
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_paul_reynaud
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_alphonse_juin
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_martial_valin
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_louis_kahn
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_robert_odic
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_emile_muselier
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_frederic_irene_joliot_curie
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_alfred_heurtaux
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_charles_tillon
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_vincent_auriol
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_rene_massigli
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_zivony_peshkov
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_roger_salengro
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_leon_blum
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_felix_gouin
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_paul_baudouin
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_jacques_duclos
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_francois_de_la_rocque
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_napoleon_vi
+		}
+		set_nationality = {
+			target_country = FRA
+			character = FRA_pierre_alombert_goget
+		}
+		set_nationality = {
+			target_country = VIC
+			character = FRA_alphonse_georges
+		}
+
+
+		retire_character = FRA_bilotte
+		retire_character = FRA_paul_vauthier
+		retire_character = FRA_joseph_vuillemin 
+		retire_character = FRA_maurice_gamelin
+		retire_character = FRA_charles_michon
+		retire_character = FRA_victor_denain
+		retire_character = FRA_rene_emile_godfroy
+		retire_character = FRA_camille_chautemps
+		retire_character = FRA_georges_bonnet
+		retire_character = FRA_jean_zay
+		retire_character = FRA_maurice_gauche
+		retire_character = FRA_jean_duke_of_guise
+		retire_character = FRA_henry_count_of_paris
+		retire_character = FRA_alphonse_i
+		retire_character = FRA_jacques_ii
+		retire_character = FRA_bertrand_fagalde
+		retire_character = FRA_petiet
+	}
+}
+
+
+#phoney war
+country_event = {
+	id = france.335
+	title = france.335.t
+	desc = france.335.d
+	picture = GFX_report_event_FRA_b1
+
+	fire_only_once = yes
+
+	trigger = {
+		has_war_with = GER
+		date > 1939.10.17
+		NOT = {
+			controls_state = 42
+		}
+		is_ally_with = ENG
+		POL = { is_ally_with = ENG }
+		POL = { has_capitulated = yes }	
+		casualties_inflicted_by = {
+    			opponent = GER
+    			thousands < 8
+		}
+		original_tag = FRA
+		BEL = {
+ 		  NOT = {
+   			 has_war_with = GER
+ 			 }
+		}
+		HOL = {
+ 		  NOT = {
+   			 has_war_with = GER
+ 			 }
+		}
+		surrender_progress < 0.01
+	 	has_idea = FRA_victors_of_wwi
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = france.335.a
+		add_timed_idea = { idea = FRA_phoney_war  days = 170 }
+		hidden_effect = {
+			news_event = { id = news.fml111 hours = 6 }
+		}
+	}
+}
+
+
+#weygand
+country_event = {
+	id = france.334
+	title = france.334.t
+	desc = france.334.d
+	picture = GFX_report_event_FRA_weygand
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = france.334.a
+		remove_ideas = FRA_gamelin
+		unlock_decision_category_tooltip = war_measures
+		add_timed_idea = { idea = FRA_weygand_is_here days = 150 }
+	}
+}
+
+# anti air
+country_event = {
+	id = france.96
+	title = france.96.t
+	desc = france.96.d
+	picture = GFX_report_event_france_tank_production
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.96.a
+		16 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+		18 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+		785 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+		29 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = france.96.b
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_1
+				amount = 1000
+			}
+	}
+}
